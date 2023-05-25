@@ -16,7 +16,7 @@ export default function Portfolio() {
           height={600}
           className="relative rounded-full h-64 w-64 mx-auto object-cover"
         />
-        <p className="text-3xl mt-5">Welcome.</p>
+        <p className="text-3xl mt-5">Portfolio.</p>
         <p className="text-lg mt-5">
           Hi my name is James Park. I'm a full stack web developer with 5 years
           of experience in Javascript and PHP based in Los Angeles, California.
