@@ -1,55 +1,66 @@
-import { SocialIcon } from "react-social-icons";
 import Image from "next/image";
 import Navigation from "../../components/navigation";
+import Footer from "../../components/footer";
 
-export default function Portfolio() {
+export default function Experience() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Navigation />
-      <div className="text-center p-10">
+      <div className="flex w-1/6 justify-between">
         <Image
-          src={
-            "https://www.jamesjinpark.com/img-backgrounds/proflie_picture.png"
-          }
-          alt={"My Picture"}
-          width={600}
-          height={600}
-          className="relative rounded-full h-64 w-64 mx-auto object-cover"
+          src={"/images/temp/kw.jpg"}
+          alt={"KW International"}
+          width={100}
+          height={100}
+          className="relative rounded-full h-32 w-32 object-cover cursor-pointer"
         />
-        <p className="text-3xl mt-5">Experience.</p>
-        <p className="text-lg mt-5">
-          Hi my name is James Park. I'm a full stack web developer with 5 years
-          of experience in Javascript and PHP based in Los Angeles, California.
-        </p>
-      </div>
-      <div className="flex md:p-16 ">
-        <SocialIcon
-          className="opacity-70 hover:opacity-100 transition-opacity duration-200"
-          url="https://www.github.com/jpark1219dev"
-          fgColor="white"
-          bgColor="transparent"
-          style={{ height: 100, width: 100 }}
+        <Image
+          src={"/images/temp/songtradr.jpg"}
+          alt={"KW International"}
+          width={100}
+          height={100}
+          className="relative rounded-full h-32 w-32 object-cover cursor-pointer"
         />
-        <div>
-          <SocialIcon
-            className="opacity-70 hover:opacity-100 transition-opacity duration-200"
-            url="https://www.linkedin.com/in/james-park-16233467/"
-            fgColor="white"
-            bgColor="transparent"
-            style={{ height: 100, width: 100 }}
-          />
+      </div>
+      <div>
+        <div className="flex flex-col items-center">
+          <p className="text-3xl mt-10 text-center">Full Stack Developer</p>
+          <p className="text-lg mt-5 text-center">March 2016 to May 2019</p>
+          <p className="text-lg mt-5 w-1/2">
+            I first started working for KW International as an Inventory Control
+            Analyst writing Excel VBA Macros to expedite and ensure data
+            accuracy in 2013 but was pulled to be one of a five man developer
+            team to create the company's web information system using PHP,
+            Laravel, Javascript, HTML, CSS, MySQL and AWS in 2016. The job
+            required working with a MVC software design pattern in which I
+            created applications for operation teams to use. The applications
+            focused on managing inventory and shipping schedules with third
+            party vendors. While working I was able to hone my communications
+            skills in determining the correct set of deliverables with
+            operations and planning relational databases with my dev team.
+          </p>
         </div>
-        <div>
-          <SocialIcon
-            className="opacity-70 hover:opacity-100 transition-opacity duration-200"
-            url="https://www.linkedin.com/in/james-park-16233467/"
-            network="email"
-            fgColor="white"
-            bgColor="transparent"
-            style={{ height: 100, width: 100 }}
-          />
+        <div className="mt-20 flex flex-col items-center">
+          <p className="text-3xl mt-5 text-center">Tech Stack Used</p>
+          <div className="flex w-1/6 justify-between mt-10">
+            <Image
+              src={"/images/temp/kw.jpg"}
+              alt={"KW International"}
+              width={100}
+              height={100}
+              className="relative rounded-full h-32 w-32 object-cover cursor-pointer"
+            />
+            <Image
+              src={"/images/temp/songtradr.jpg"}
+              alt={"KW International"}
+              width={100}
+              height={100}
+              className="relative rounded-full h-32 w-32 object-cover cursor-pointer"
+            />
+          </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

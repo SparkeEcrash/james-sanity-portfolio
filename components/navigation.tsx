@@ -8,6 +8,10 @@ export default function Navigation() {
   const [mobileNav, setMobileNav] = useState(false);
   const pages = ["home", "about", "experience", "skills", "projects"];
   const path = usePathname();
+  const activeLinkStyle = "text-4xl opacity-100 text-baby-blue";
+  const inactiveLinkStyleDesktop =
+    "text-3xl opacity-70 hover:opacity-100 hover:text-4xl transition-all duration-200";
+  const ianctiveLinkStyleMobile = "text-4xl opacity-100 text-white";
 
   useEffect(() => {
     function handleResize() {
@@ -49,10 +53,10 @@ export default function Navigation() {
               href={page === "home" ? "" : page}
               className={`px-5 mx-5 cursor-pointer flex justify-center items-center h-16 ${
                 path === "/" + page
-                  ? "text-4xl opacity-100"
+                  ? activeLinkStyle
                   : path === "/" && page === "home"
-                  ? "text-4xl opacity-100"
-                  : "text-3xl opacity-70 hover:opacity-100 hover:text-4xl transition-all duration-200"
+                  ? activeLinkStyle
+                  : ianctiveLinkStyleMobile
               }`}
               key={i}
             >
@@ -68,10 +72,10 @@ export default function Navigation() {
             href={page === "home" ? "" : page}
             className={`px-5 mx-5 cursor-pointer flex justify-center items-center h-16 ${
               path === "/" + page
-                ? "text-4xl opacity-100"
+                ? activeLinkStyle
                 : path === "/" && page === "home"
-                ? "text-4xl opacity-100"
-                : "text-3xl opacity-70 hover:opacity-100 hover:text-4xl transition-all duration-200"
+                ? activeLinkStyle
+                : inactiveLinkStyleDesktop
             }`}
             key={i}
           >

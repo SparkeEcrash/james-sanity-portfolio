@@ -2,6 +2,7 @@
 
 # temp
 /temp
+/public/images/temp
 
 # dependencies
 /node_modules
