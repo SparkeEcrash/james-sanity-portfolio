@@ -4,9 +4,6 @@
 /temp
 /public/images/temp
 
-# sanity
-/james-sanity-portfolio
-
 # dependencies
 /node_modules
 /.pnp
