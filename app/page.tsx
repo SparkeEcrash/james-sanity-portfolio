@@ -2,9 +2,9 @@ import Image from "next/image";
 import Navigation from "../components/navigation";
 import Footer from "../components/footer";
 
-export default function Portfolio() {
+export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="relative flex min-h-screen flex-col items-center justify-between">
       <Navigation />
       <div className="text-center p-10">
         <Image
@@ -17,7 +17,7 @@ export default function Portfolio() {
         <p className="text-3xl mt-5">Welcome!</p>
         <p className="text-lg mt-5">
           Hi my name is James Park. I&apos;m a full stack web developer with 5
-          years of experience in Javascript and PHP based in Los Angeles,
+          years of experience in Los Angeles,
           California.
         </p>
       </div>

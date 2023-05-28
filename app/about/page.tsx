@@ -4,7 +4,7 @@ import Footer from "../../components/footer";
 
 export default function About() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="relative flex min-h-screen flex-col items-center justify-between">
       <Navigation />
       <div className="p-8 flex justify-center items-center">
         <Image

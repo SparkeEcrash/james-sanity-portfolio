@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navigation() {
-  const [mobileNav, setMobileNav] = useState(false);
+  const [mobileNav, setMobileNav] = useState<boolean>(false);
   const pages = ["home", "about", "experience", "skills", "projects"];
   const path = usePathname();
   const activeLinkStyle = "text-4xl opacity-100 text-baby-blue";
@@ -43,11 +43,11 @@ export default function Navigation() {
         whileInView={{ opacity: 0.95 }}
         transition={{ duration: 0.5 }}
         className={`${
-          mobileNav ? "absolute min-h-screen z-10 w-full bg-black" : "hidden"
+          mobileNav ? "absolute top-0 bottom-0 z-10 w-full bg-black" : "hidden"
         }`}
         onClick={() => setMobileNav(false)}
       >
-        <div className="min-h-screen flex flex-col justify-evenly items-center">
+        <div className="h-full flex flex-col justify-evenly items-center">
           {pages.map((page, i) => (
             <Link
               href={page === "home" ? "" : page}
