@@ -26,7 +26,7 @@ export default function Navigation() {
   return (
     <>
       {/* mobile button */}
-      <div className="flex p-6 md:p-16 lg:hidden cursor-pointer opacity-70 hover:opacity-100 transition-opacity duration-200">
+      <div className="transparent-highlight flex p-8 xsm:p-16 lg:hidden cursor-pointer opacity-70 hover:opacity-100 transition-opacity duration-200">
         <button
           className="h-14 w-14 rounded-md border-4 border-white flex flex-col justify-evenly items-center"
           onClick={() => setMobileNav(!mobileNav)}
@@ -43,7 +43,7 @@ export default function Navigation() {
         whileInView={{ opacity: 0.95 }}
         transition={{ duration: 0.5 }}
         className={`${
-          mobileNav ? "absolute top-0 bottom-0 z-10 w-full bg-black" : "hidden"
+          mobileNav ? "fixed h-full z-10 w-full bg-black" : "hidden"
         }`}
         onClick={() => setMobileNav(false)}
       >
@@ -66,7 +66,7 @@ export default function Navigation() {
         </div>
       </motion.div>
       {/* desktop navigation */}
-      <div className="p-16 hidden lg:flex">
+      <div className="p-16 hidden lg:flex max-w-full">
         {pages.map((page, i) => (
           <Link
             href={page === "home" ? "" : page}

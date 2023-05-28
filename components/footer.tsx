@@ -2,7 +2,7 @@ import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
   return (
-    <div className="md:p-16">
+    <div className="py-8 xsm:p-16">
       <div className="flex">
         <SocialIcon
           className="opacity-70 hover:opacity-100 transition-opacity duration-200"
