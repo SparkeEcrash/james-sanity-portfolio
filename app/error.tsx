@@ -1,21 +1,12 @@
-"use client"
-import Navigation from "../components/navigation";
-import AnimatedImage from "../components/image";
-import Footer from "../components/footer";
+"use client";
 
-export default function Error() {
+export default async function Error() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Navigation />
+    <main className="flex flex-col items-center justify-center h-full">
       <div className="text-center">
-        <AnimatedImage
-          page="Home"
-          image="/images/temp/profile.jpg"
-        />
-        <p className="text-3xl mt-5">Oops!</p>
-        <p className="text-lg mt-5 px-5">Something went wrong.</p>
+        <p className="text-3xl">500.</p>
+        <p className="text-lg mt-5 px-5">Something went wrong!</p>
       </div>
-      <Footer />
     </main>
   );
 }

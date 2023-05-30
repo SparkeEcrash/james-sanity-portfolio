@@ -14,14 +14,18 @@ export const metadata = {
 
 // export const revalidate = 10;
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={myFont.className}>{children}</body>
+      <body
+        className={`${myFont.className} flex flex-col justify-between min-h-screen`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

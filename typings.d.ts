@@ -1,4 +1,4 @@
-interface SanityBody {
+interface ISanityBody {
   _createdAt: string;
   _id: string;
   _rev: string;
@@ -6,13 +6,12 @@ interface SanityBody {
   _type: string;
 }
 
-interface Social {
-  _ref: string;
-  _type: string;
-  _key: string;
+export interface ISocial extends SanityBody {
+  link: string;
+  name: string;
 }
 
-interface Picture {
+interface IPicture {
   _type: string;
   asset: {
     _type: string;
@@ -20,16 +19,46 @@ interface Picture {
   };
 }
 
-export interface HomePageData extends SanityBody {
-  copyrightYear: number;
-  profilePic: Picture;
-  header: string;
-  subheader: string;
-  socials: Social[];
+export interface ISkill extends SanityBody {
+  name: string;
+  image: IPicture;
+  imageUrl?: string;
 }
 
-export interface AboutPageData extends SanityBody {
+export interface IJob extends SanityBody {
+  jobTitle: string;
+  companyName: string;
+  image: IPicture;
+  imageUrl?: string;
+  companyLocation: string;
+  jobSummary: string;
+  dateStarted: string;
+  dateEnded: string;
+  techs: ISkill[];
+}
+
+export interface IHomePageData extends SanityBody {
+  copyrightYear: number;
+  profilePic: Picture;
+  profilePicUrl?: string;
+  header: string;
+  subheader: string;
+  socials: ISocial[];
+}
+
+export interface IAboutPageData extends SanityBody {
   header: string;
   story: string;
-  aboutPic: Picture;
+  aboutPic: IPicture;
+  aboutPicUrl?: string;
+}
+
+export interface IExperiencePageData extends SanityBody {
+  techListHeader: string;
+  jobs: IJob[];
+}
+
+export interface ISkillsPageData extends SanityBody {
+  mySkills: ISkill[];
+  myToolsListHeader: string;
 }

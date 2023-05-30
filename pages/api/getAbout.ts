@@ -4,12 +4,11 @@ import { groq } from "next-sanity";
 import { sanityClient } from "../../sanity";
 
 const query = groq`
-	*[_type == "about"]
+	*[_type == "about"] {
+		...,
+		"aboutPicUrl": aboutPic.asset->url,
+	}
 `
-
-// type Data = {
-// 	pageInfo: PageInfo;
-// }
 
 export default async function handler(
 	req: NextApiRequest,

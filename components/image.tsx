@@ -2,12 +2,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-type Props = {
+type AnimatedImageProps = {
   page: string;
   image: string;
 };
 
-export default function AnimatedImage({ page, image }: Props) {
+export default function AnimatedImage({ page, image }: AnimatedImageProps) {
   if (page === "Home") {
     return (
       <motion.div

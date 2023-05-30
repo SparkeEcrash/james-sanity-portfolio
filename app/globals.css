@@ -1,3 +1,5 @@
+@import "~spinners-react/lib/SpinnerDotted.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,3 +24,5 @@ body {
 .transparent-highlight {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* spinner documenation: https://github.com/mhnpd/react-loader-spinner */

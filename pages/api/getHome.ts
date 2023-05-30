@@ -4,18 +4,18 @@ import { groq } from "next-sanity";
 import { sanityClient } from "../../sanity";
 
 const query = groq`
-	*[_type == "home"]
-`
-
-// type Data = {
-// 	pageInfo: PageInfo;
-// }
+	*[_type == "home"] {
+		...,
+		socials[]->,
+		"profilePicUrl": profilePic.asset->url,
+	}
+`;
 
 export default async function handler(
-	req: NextApiRequest,
-	res: NextApiResponse
+  req: NextApiRequest,
+  res: NextApiResponse
 ) {
-	const pageInfo = await sanityClient.fetch(query);
+  const pageInfo = await sanityClient.fetch(query);
 
-	res.status(200).json({ pageInfo })
+  res.status(200).json({ pageInfo });
 }
