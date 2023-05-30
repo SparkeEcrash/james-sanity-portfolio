@@ -1,9 +1,11 @@
 import {defineField, defineType} from 'sanity'
+import {DocumentTextIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'home',
   title: 'Home',
   type: 'document',
+	icon: DocumentTextIcon,
   fields: [
     defineField({
       name: 'header',
@@ -28,6 +30,11 @@ export default defineType({
       title: 'Social Links',
       type: 'array',
       of: [{type: 'reference', to: {type: 'social'}}],
+    }),
+    defineField({
+      name: 'copyrightYear',
+      title: 'Copyright Year',
+      type: 'number',
     }),
   ],
 })

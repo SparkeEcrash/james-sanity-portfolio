@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="flex">
         <SocialIcon
           className="opacity-70 hover:opacity-100 transition-opacity duration-200"
-          url="https://www.github.com/jpark1219dev"
+          url="https://www.github.com/SparkeEcrash"
           fgColor="white"
           bgColor="transparent"
           style={{ height: 100, width: 100 }}

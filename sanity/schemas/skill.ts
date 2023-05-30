@@ -1,9 +1,11 @@
 import {defineField, defineType} from 'sanity'
+import {SparkleIcon} from '@sanity/icons'
 
 export default defineType({
-  name: 'social',
-  title: 'Social',
-  type: 'object',
+  name: 'skill',
+  title: 'Skill',
+  type: 'document',
+  icon: SparkleIcon,
   fields: [
     defineField({
       name: 'name',
@@ -17,15 +19,6 @@ export default defineType({
       options: {
         hotspot: true,
       },
-    }),
-    defineField({
-      name: 'link',
-      title: 'Link',
-      type: 'url',
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ['http', 'https', 'mailto', 'tel'],
-        }),
     }),
   ],
 })

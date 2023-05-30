@@ -12,6 +12,8 @@ export const metadata = {
   description: "James Park's Portfolio",
 };
 
+// export const revalidate = 10;
+
 export default function RootLayout({
   children,
 }: {

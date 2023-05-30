@@ -1,11 +1,8 @@
 import Navigation from "../components/navigation";
 import AnimatedImage from "../components/image";
 import Footer from "../components/footer";
-import { getPageData } from "../utils/fetchData";
-import { HomePageData } from "../typings";
 
-export default async function Home() {
-  const data: HomePageData = await getPageData("/api/getHome");
+export default function NotFound() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Navigation />
@@ -14,8 +11,8 @@ export default async function Home() {
           page="Home"
           image="/images/temp/profile.jpg"
         />
-        <p className="text-3xl mt-5">{data.header}</p>
-        <p className="text-lg mt-5 px-5">{data.subheader}</p>
+        <p className="text-3xl mt-5">Uh oh!</p>
+        <p className="text-lg mt-5 px-5">This page was not found.</p>
       </div>
       <Footer />
     </main>

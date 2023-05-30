@@ -2,8 +2,8 @@ import home from './home'
 import about from './about'
 import experience from './experience'
 import skills from './skills'
-import company from '../objects/company'
-import skill from '../objects/skill'
-import social from '../objects/social'
+import job from './job'
+import skill from './skill'
+import social from './social'
 
-export const schemaTypes = [home, about, experience, skills, company, skill, social]
+export const schemaTypes = [home, about, experience, skills, job, skill, social]
